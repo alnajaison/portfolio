@@ -1,0 +1,27 @@
+.page {
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+.header {
+  max-width: 40rem;
+  margin-bottom: var(--space-lg);
+}
+
+.heading {
+  font-family: var(--font-script);
+  font-size: var(--fs-display);
+  color: var(--color-wine);
+}
+
+.subhead {
+  margin-top: var(--space-2xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-sm);
+}

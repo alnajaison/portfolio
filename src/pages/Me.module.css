@@ -52,29 +52,29 @@
 }
 
 .photoSmall {
-  width: 160px;
+  width: 110px;
   flex: 0 0 auto;
 }
 
 .photoCenter {
-  width: 300px;
+  width: 200px;
   flex: 0 0 auto;
 }
 
 .offsetDown {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
 }
 
 .offsetDownMore {
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-lg);
 }
 
 @media (max-width: 720px) {
   .photoSmall {
-    width: 130px;
+    width: 92px;
   }
   .photoCenter {
-    width: 220px;
+    width: 160px;
   }
   .offsetDown,
   .offsetDownMore {

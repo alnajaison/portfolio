@@ -1,4 +1,4 @@
-# Portfolio — Phase 1 (Foundation + Me page)
+# Portfolio — Phase 1 + 2 (Foundation, Me, Projects, Gallery)
 
 A personal scrapbook/zine-style portfolio. Built with React + TypeScript + Vite,
 plain CSS with design tokens, and react-router-dom for page navigation.
@@ -18,7 +18,8 @@ pnpm install
 pnpm dev
 ```
 
-Then open the local URL it prints (usually http://localhost:5173).
+Then open the local URL it prints — runs on **http://localhost:3000** (set in
+`vite.config.ts`, not the Vite default of 5173).
 
 Other commands:
 - `pnpm build` — type-checks and builds a production bundle into `dist/`
@@ -35,13 +36,25 @@ Other commands:
   Extracurriculars, with a pinned-tab style nav (`src/components/Nav.tsx`).
 - **Me page** (`src/pages/Me.tsx`) — fully built: masthead, headline,
   photo collage, interest tags, bio, and links into the rest of the site.
+- **Projects page** (`src/pages/Projects.tsx`) — renders every project from
+  `src/data/projects.ts`. Each one shows a media frame, role, short
+  description, key features, a Completed/Ongoing status badge, and an
+  expandable "read the case study" section. **To add a new project**, just
+  append an object to the array in `src/data/projects.ts` — nothing else
+  needs to change.
+- **Gallery page** (`src/pages/Gallery.tsx`) — a grid of pieces from
+  `src/data/gallery.ts`, each revealing its title/description on hover or
+  keyboard focus. **To add a new piece**, append an object to that file.
 - **Reusable components**:
-  - `PolaroidPhoto` — the tilted, pinned-photo placeholder. Swap in a real
-    image later by adding an `<img>` inside once you have one — see the
-    inline comments in `src/components/PolaroidPhoto.tsx`.
+  - `PolaroidPhoto` — the tilted, pinned-photo placeholder on the Me page.
+    Swap in a real image later by adding an `<img>` inside once you have
+    one — see the inline comments in `src/components/PolaroidPhoto.tsx`.
+  - `MediaFrame` — the placeholder frame on each project entry, meant to
+    later hold a screenshot, video, or small slideshow.
   - `StickyNote` — small handwritten-style callout.
   - `PinDot` — the little red pin dot (decorative).
-  - `ComingSoon` — placeholder shown on the not-yet-built pages.
+  - `ComingSoon` — placeholder shown on the not-yet-built pages
+    (Achievements, Extracurriculars).
 
 ## What's placeholder / needs your input
 
@@ -51,8 +64,13 @@ Other commands:
   `Me.tsx`. Once you have real photos, the simplest swap is adding an
   `<img src="..." alt="..." />` inside the component's `imageArea` div
   instead of the dashed placeholder box.
-- Projects, Gallery, Achievements, Extracurriculars pages — stubbed with a
-  "coming soon" message. These are Phase 2 and Phase 3.
+- Every project's `MediaFrame` on the Projects page — same idea, swap the
+  placeholder `<div>` in `src/components/MediaFrame.tsx` for a real
+  `<img>`, `<video>`, or small slideshow once you have assets.
+- All 6 Gallery pieces are placeholders — replace `title`/`description` in
+  `src/data/gallery.ts` and add real images the same way as above.
+- Achievements and Extracurriculars pages — still stubbed with a
+  "coming soon" message. These are Phase 3.
 
 ## Design system notes
 
@@ -66,8 +84,6 @@ Other commands:
   mobile are already in place (see `src/styles/global.css` and the
   `@media` queries in each component's CSS module).
 
-## Next phases
+## Next phase
 
-- **Phase 2:** Projects page (completed/ongoing, framed media area) + Gallery
-  page (hover-reveal grid)
 - **Phase 3:** Achievements + Extracurriculars pages, final polish pass
