@@ -1,0 +1,150 @@
+.page {
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+/* ---- Masthead row ---- */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.issueTag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  border: 1px solid rgba(74, 46, 39, 0.35);
+  padding: var(--space-3xs) var(--space-xs);
+}
+
+/* ---- Hero ---- */
+.hero {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto var(--space-xl);
+}
+
+.headline {
+  font-family: var(--font-script);
+  font-size: var(--fs-display);
+  color: var(--color-ink);
+  line-height: 1.05;
+}
+
+.subhead {
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+/* ---- Collage ---- */
+.collageRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-lg) var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.photoSmall {
+  width: 160px;
+  flex: 0 0 auto;
+}
+
+.photoCenter {
+  width: 300px;
+  flex: 0 0 auto;
+}
+
+.offsetDown {
+  margin-top: var(--space-xl);
+}
+
+.offsetDownMore {
+  margin-top: var(--space-2xl);
+}
+
+@media (max-width: 720px) {
+  .photoSmall {
+    width: 130px;
+  }
+  .photoCenter {
+    width: 220px;
+  }
+  .offsetDown,
+  .offsetDownMore {
+    margin-top: 0;
+  }
+}
+
+/* ---- Tag pills ---- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-xl);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--color-umber);
+  background: var(--color-surface);
+  border: 1px solid rgba(74, 46, 39, 0.3);
+  padding: var(--space-3xs) var(--space-xs);
+  border-radius: 999px;
+}
+
+/* ---- Bio ---- */
+.bioRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bio {
+  max-width: 38rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  line-height: 1.75;
+  color: var(--color-ink);
+}
+
+.bio strong {
+  color: var(--color-wine);
+}
+
+.editNote {
+  margin-top: var(--space-xs);
+  font-size: var(--fs-label);
+  color: var(--color-accent-soft);
+}
+
+/* ---- CTA row ---- */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-umber);
+  color: var(--color-ink);
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.cta:hover {
+  background: var(--color-wine);
+  color: var(--color-paper);
+  border-color: var(--color-wine);
+}

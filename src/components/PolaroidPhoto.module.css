@@ -1,0 +1,54 @@
+.frame {
+  position: relative;
+  display: inline-block;
+  background: #fffdf4;
+  padding: 10px 10px 34px;
+  box-shadow: var(--shadow-photo);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  will-change: transform;
+}
+
+.frame:hover,
+.frame:focus-within {
+  transform: rotate(0deg) scale(1.03) !important;
+  box-shadow: var(--shadow-photo-hover);
+  z-index: 5;
+}
+
+.imageArea {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(74, 46, 39, 0.08),
+      rgba(74, 46, 39, 0.08) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    var(--color-paper);
+  border: 1px dashed rgba(74, 46, 39, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xs);
+}
+
+.placeholderLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+  color: var(--color-umber);
+}
