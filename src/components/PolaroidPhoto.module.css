@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
   background: #fffdf4;
-  padding: 10px 10px 34px;
+  padding: 6px 6px 22px;
   box-shadow: var(--shadow-photo);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   will-change: transform;
@@ -44,11 +44,11 @@
 
 .caption {
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   left: 0;
   right: 0;
   text-align: center;
   font-family: var(--font-script);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-umber);
 }

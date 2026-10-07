@@ -1,5 +1,5 @@
 .page {
-  padding-block: var(--space-lg) var(--space-2xl);
+  padding-block: var(--space-md) var(--space-2xl);
 }
 
 /* ---- Masthead row ---- */
@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .issueTag {
@@ -23,19 +23,19 @@
 /* ---- Hero ---- */
 .hero {
   text-align: center;
-  max-width: 44rem;
-  margin: 0 auto var(--space-xl);
+  max-width: 40rem;
+  margin: 0 auto var(--space-md);
 }
 
 .headline {
   font-family: var(--font-script);
-  font-size: var(--fs-display);
+  font-size: clamp(2rem, 5vw, 3.6rem);
   color: var(--color-ink);
   line-height: 1.05;
 }
 
 .subhead {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-2xs);
   font-family: var(--font-mono);
   font-size: var(--fs-small);
   color: var(--color-text-muted);
@@ -47,34 +47,34 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: var(--space-lg) var(--space-md);
-  margin-bottom: var(--space-lg);
+  gap: var(--space-sm) var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .photoSmall {
-  width: 110px;
+  width: 80px;
   flex: 0 0 auto;
 }
 
 .photoCenter {
-  width: 200px;
+  width: 150px;
   flex: 0 0 auto;
 }
 
 .offsetDown {
-  margin-top: var(--space-md);
+  margin-top: var(--space-xs);
 }
 
 .offsetDownMore {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
 }
 
 @media (max-width: 720px) {
   .photoSmall {
-    width: 92px;
+    width: 68px;
   }
   .photoCenter {
-    width: 160px;
+    width: 120px;
   }
   .offsetDown,
   .offsetDownMore {
@@ -88,7 +88,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-2xs);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
 .tag {
